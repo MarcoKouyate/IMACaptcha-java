@@ -10,4 +10,16 @@ public class Item {
 	public boolean selected() {
 		return isSelected;
 	}
+	
+	public String toString() {
+		return "Item";
+	}
+	
+	public boolean check(Item item) {
+		if (item instanceof Item) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

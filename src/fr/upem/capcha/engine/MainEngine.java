@@ -3,7 +3,9 @@ import fr.upem.capcha.engine.Match;
 
 public class MainEngine {
 	public static void launch(String[] args) {
-		if (Match.checkAnswers()) {
+		Match matching = new Match();
+		
+		if (matching.checkAnswers()) {
 			System.out.println("Ca passe");
 		} else {
 			System.out.println("Ca casse");
