@@ -15,23 +15,36 @@ class Match {
 	
 	
 	private void initializeList() {
-		for (int i = 0; i < 5; i++) {
-			items.add(new Item(true));
-		}
-		items.add(new Item(true));
+//		for (int i = 0; i < 9; i++) {
+//			items.add(new Item(true));
+//		}
+		
+		items.add(new Item(false));
 		items.add(new Panneau(true));
-		items.add(new Item(true));
+		items.add(new Panneau(true));
+		items.add(new Item(false));
+		items.add(new Item(false));
+		items.add(new Panneau(true));
+		items.add(new Item(false));
 		items.add(new Panneau(true));
 	}
 	
 	public boolean checkAnswers() {
-		boolean isCorrect = true;
+		boolean isTotalCorrect = true;
 		
 		for (int i = 0; i < items.size(); i++) {
-			System.out.println(i + " : " + sample.check(items.get(i)));
-			isCorrect = isCorrect & sample.check(items.get(i));
+			boolean isCorrect = sample.check(items.get(i));
+			boolean isSelected = items.get(i).selected();
+					
+			if (isCorrect) {
+				if (isSelected) {
+					
+				} 
+				System.out.println(i + " correct : " + isCorrect + " / selected : " + isSelected );
+				isTotalCorrect = isTotalCorrect & isCorrect & isSelected;
+			}
 		}
 		
-		return isCorrect;
+		return isTotalCorrect;
 	}
 }
