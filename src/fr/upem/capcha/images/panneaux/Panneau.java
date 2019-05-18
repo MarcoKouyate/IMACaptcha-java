@@ -1,4 +1,5 @@
-package fr.upem.capcha.engine;
+package fr.upem.capcha.images.panneaux;
+import  fr.upem.capcha.images.Item;
 
 public class Panneau extends Item {
 

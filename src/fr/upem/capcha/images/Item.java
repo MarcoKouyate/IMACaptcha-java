@@ -1,4 +1,4 @@
-package fr.upem.capcha.engine;
+package fr.upem.capcha.images;
 
 public class Item {
 	boolean isSelected;

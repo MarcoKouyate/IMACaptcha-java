@@ -1,6 +1,9 @@
 package fr.upem.capcha.engine;
-import  fr.upem.capcha.engine.Item;
-import  fr.upem.capcha.engine.Panneau;
+import  fr.upem.capcha.images.Item;
+import  fr.upem.capcha.images.panneaux.Panneau;
+
+
+
 import java.util.ArrayList;
 
 class Match {
