@@ -15,10 +15,6 @@ class Match {
 	
 	
 	private void initializeList() {
-//		for (int i = 0; i < 9; i++) {
-//			items.add(new Item(true));
-//		}
-		
 		items.add(new Item(false));
 		items.add(new Panneau(true));
 		items.add(new Panneau(true));
@@ -36,10 +32,7 @@ class Match {
 			boolean isCorrect = sample.check(items.get(i));
 			boolean isSelected = items.get(i).selected();
 					
-			if (isCorrect) {
-				if (isSelected) {
-					
-				} 
+			if (isCorrect || isSelected) {
 				System.out.println(i + " correct : " + isCorrect + " / selected : " + isSelected );
 				isTotalCorrect = isTotalCorrect & isCorrect & isSelected;
 			}
